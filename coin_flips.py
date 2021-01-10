@@ -25,7 +25,6 @@ def strMult(val, array):
 
 @memoized
 def coin_flips(n):
-    print(n)
     # Base case: 
     if n == 1 : return ['H', 'T']
     else: 
