@@ -3,10 +3,14 @@
 
 # This function returns the largest number in a given array.
 
+def my_max(n,m):
+    if n > m : return n
+    else: return m
+
 def find_max(l):
     if type(l[0]) != int: raise ValueError("l must be a list of integers")
     if len(l) <= 1: return 1
-    else: return max(l[0], find_max(l[1:]))
+    else: return my_max(l[0], find_max(l[1:]))
 
 # print(find_max([1, 4, 45, 6, -50, 10, 2]))
 # => 45
