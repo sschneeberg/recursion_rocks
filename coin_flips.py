@@ -31,6 +31,8 @@ def coin_flips(n):
         # return H*coin_flips(n-1) + T*coin_flips(n-1)
         return strMult('H', coin_flips(n-1)) + strMult('T', coin_flips(n-1))
 
+# could have done map with a lambda function, instead of writing another function that basically was map 
+
 assert(set(coin_flips(2)) == set(["HH", "HT", "TH", "TT"]))
 assert(set(coin_flips(4)) == set(["HHHH", "HHHT", "HHTT", "HTTT", "HHTH", "HTHH", "THHH", "TTHH", "TTTH" , "TTTT", "THTH", "THHT", "HTHT", "HTTH", "TTHT", "THTT"]))
 
